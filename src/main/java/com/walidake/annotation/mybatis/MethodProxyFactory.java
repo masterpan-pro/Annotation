@@ -4,18 +4,18 @@ import java.lang.reflect.Proxy;
 
 /**
  * 动态代理工厂
- * @author walidake
  *
+ * @author walidake
  */
 public class MethodProxyFactory {
-	
+
     @SuppressWarnings("unchecked")
-	public static <T> T getBean(Class<T> clazz) {
+    public static <T> T getBean(Class<T> clazz) {
         final MethodProxy methodProxy = new MethodProxy();
         return (T) Proxy.newProxyInstance(
-                Thread.currentThread().getContextClassLoader(), 
-                new Class[]{clazz}, 
+                Thread.currentThread().getContextClassLoader(),
+                new Class[]{clazz},
                 methodProxy);
     }
-    
+
 }

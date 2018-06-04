@@ -3,14 +3,15 @@ package com.walidake.annotation.tea;
 import java.lang.annotation.Documented;
 
 @Documented
-@interface DocumentedAnnotation{
-	
+@interface DocumentedAnnotation {
+
 }
 
-@interface UnDocumentedAnnotation{
-	
+@interface UnDocumentedAnnotation {
+
 }
 
 @DocumentedAnnotation
 @UnDocumentedAnnotation
-public class UseDocumentedAnnotation{}
+public class UseDocumentedAnnotation {
+}
